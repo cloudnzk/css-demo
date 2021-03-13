@@ -5,7 +5,7 @@
     /* IE盒模型. width 和 height 属性包括内容，内边距和边框，但不包括外边距
     因此修改内边距和边框大小不会撑大盒子
     */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 /* em 和 i 斜体的文字不倾斜 */

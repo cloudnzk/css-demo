@@ -85,7 +85,7 @@
     top: 25px;
     left: 346px;
     width: 538px;
-    height: 36px;
+    height: 32px;
     border: 2px solid #b1191a;
 }
 
@@ -99,15 +99,13 @@
 
 .search button {
     position: absolute;
-    /* 消除button周围的缝隙 */
     right: 0;
-    bottom: 0;
+    top: 0;
     /* 行内块元素会有缝隙，用浮动消除 */
     float: left;
     width: 80px;
-    /* 为了消除button底下的缝隙，把高度设置得高一点 */
-    height: 33px;
-    line-height: 33px;
+    height: 32px;
+    line-height: 32px;
     text-align: center;
     background-color: #b1191a;
     font-size: 16px;
