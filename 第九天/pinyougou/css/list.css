@@ -1,0 +1,72 @@
+/* 行高设大了会撑大盒子，有浮动的话会影响下面的布局，所以要隐藏溢出部分  */
+.nav {
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    padding: 0 30px;
+    line-height: 47px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: block;
+    padding: 0 20px;
+    /* 行高调大一点，文字可以往偏下一点 */
+    line-height: 49px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+
+.sk_bd ul li {
+    /* 图片宽度和盒子宽度一样，加了边框还需要保持原宽度的话，
+    这样右边框会被相对右移的图片压住，隐藏撑出来这部分即可 */
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    width: 290px;
+    height: 460px;
+    /* 如果不加这个透明边框，鼠标经过的时候盒子会往下抖
+    （因为原来没有边框，而鼠标经过在上面加了边框，图片相对下移）
+    加边框后固定图片位置，换边框颜色即可*/
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
