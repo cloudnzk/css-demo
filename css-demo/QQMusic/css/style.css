@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: 14px/1.5 poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+    color: #000;
+    /* background-color: #fafafa; */
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+button{
+    /* border: none; */
+    background-color: transparent;
+}
+
+li{
+    list-style: none;
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*版心*/
+.wrap{
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.top_nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    margin: 0 auto;
+    /* border-bottom: 1px solid #f6f6f6; */
+}
+
+.logo a{
+    display: block;
+    padding: 5px 20px 0 0;
+}
+
+.top_nav_items ul {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.top_nav_items ul li{
+    display: flex;
+    width: auto;
+}
+
+.top_nav_items ul li a{
+    display: block;
+    padding: 0 20px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 18px;
+}
+
+/* .top_nav_items ul li:first-child{
+    background-color: #31c27c;
+    color: #fff;
+} */
+.top_nav_items ul li:first-child a{
+    background-color: #31c27c;
+    color: #fff;
+}
+
+.top_nav_items ul li:nth-child(3){
+    position: relative;
+}
+
+.top_nav__mark{
+    position: absolute;
+    top: 18px;
+    right: 0;
+    height: 14px;
+}
+
+
+.search{
+    position: relative;
+    /* margin-top: 26px; */
+    margin-left: 40px;
+    padding: 0 33px 0 11px;
+    width: 174px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+}
+
+.search input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+}
+
+.sprite{
+    background-image: url(../images/icon_sprite.630b3e60.png);
+}
+
+.search_icon{
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-position: 0 -40px;
+}
+
+.user{
+    display: flex;
+    width: auto;
+}
+
+.login_link{
+    display: block;
+    position: relative;
+    margin: 2px 10px 0px 20px;
+    width: 38px;
+}
+
+.avatar{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.login_qq{
+    position: absolute;
+    bottom: 2px;
+    right: -2px;
+    width: 14px;
+    height: 14px;
+}
+
+.vip{
+    position: relative;
+    width: 122px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 13px;
+    /* margin-top: 24px; */
+}
+
+.vip a{
+    display: block;
+    padding: 0 15px 0 10px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #31c27c;
+    border-radius: 3px;
+    background-color: #31c27c;
+}
+
+/*画小三角*/
+.vip a::after{
+    position: absolute;
+    content: "";
+    right: 8px;
+    top: 16px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top: 6px solid;
+}
+
+/*有很多重复的代码，可以写一个公共样式*/
+.charge{
+    position: relative;
+    width: 83px;
+    height: 38px;
+    line-height: 38px;
+    margin-left: 10px;
+}
+
+.charge a{
+    display: block;
+    padding: 0 15px 0 10px;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    /* background-color: #31c27c; */
+}
+
+.charge a:hover{
+    background-color: #31c27c;
+    color: #fff;
+}
+
+.charge a::after{
+    position: absolute;
+    content: "";
+    right: 8px;
+    top: 16px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top: 6px solid;
+}
+
+/*样式分离，全部放一块很乱*/
+.sub_nav{
+    display: flex;
+    padding-left: 230px;
+    /* margin-right: -50px; */
+    height: 51px;
+    line-height: 51px;
+    border-top: 1px solid #f2f2f2;
+    font-size: 15px;
+    color: #c1c1c1;
+}
+
+.sub_nav ul {
+    display: flex;
+}
+
+.sub_nav ul li{
+    margin-right: 47px;
+}
+
+.playlist{
+    display: flex;
+    flex-direction: column;
+    background: url(../images/bg_detail.bb32b2d1.jpg) 50% 0 repeat-x;
+}
+
+.playlist ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* padding-top: 25px; */
+}
+
+.playlist ul li{
+    margin-right: 20px;
+    margin-bottom: 25px;
+}
+
+.playlist__pic{
+    height: 224px;
+    width: 224px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    image-rendering: optimizeQuality;
+}
+
+.playlist__title {
+    max-width: 100%;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 22px;
+    max-height: 44px;
+}
+
+.playlist__other {
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
+    font-size: 14px;
+}
